@@ -69,9 +69,17 @@ public class WorkspaceEventsHandler {
 		}
 	}
 
+	public void didChangeWatchedKtFiles(FileEvent change) {
+		
+	}
+
 	public void didChangeWatchedFiles(DidChangeWatchedFilesParams param) {
 		List<FileEvent> changes = param.getChanges().stream().distinct().collect(Collectors.toList());
 		for (FileEvent fileEvent : changes) {
+			String uri = fileEvent.getUri();
+			if (uri.endsWith(".kt")) {
+				didChangeWatchedKtFiles(fileEvent);
+			}
 			CHANGE_TYPE changeType = toChangeType(fileEvent.getType());
 			if (changeType == CHANGE_TYPE.DELETED) {
 				cleanUpDiagnostics(fileEvent.getUri());

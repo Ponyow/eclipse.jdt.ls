@@ -1,0 +1,41 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "jdt.ls.remote.server.launch",
+            "request": "launch",
+            "mainClass": "org.eclipse.equinox.launcher.Main",
+            "projectName": "org.eclipse.jdt.ls.core",
+            "classPaths": [
+                "/Users/yt/Library/Application Support/Code/User/workspaceStorage/c73832b744283224dea87e03861b5d1c/redhat.java/jdt_ws/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar"
+            ],
+            "args": [
+                "-application",
+                "org.eclipse.jdt.ls.core.id1",
+                "-data",
+                "/Users/yt/Library/Application Support/Code/User/workspaceStorage/c73832b744283224dea87e03861b5d1c/redhat.java/jdt_ws/../runtime-JDT-LS",
+                "-configuration",
+                "file:/Users/yt/Library/Application Support/Code/User/workspaceStorage/c73832b744283224dea87e03861b5d1c/redhat.java/jdt_ws/.metadata/.plugins/org.eclipse.pde.core/jdt.ls.remote.server/",
+                "-dev",
+                "file:/Users/yt/Library/Application Support/Code/User/workspaceStorage/c73832b744283224dea87e03861b5d1c/redhat.java/jdt_ws/.metadata/.plugins/org.eclipse.pde.core/jdt.ls.remote.server/dev.properties",
+                "-os",
+                "macosx",
+                "-ws",
+                "cocoa",
+                "-arch",
+                "x86_64",
+                "-nl",
+                "zh_CN_#Hans",
+                "-consoleLog"
+            ],
+            "vmArgs": [
+                "-Djava.import.generatesMetadataFilesAtProjectRoot=false",
+                "-Declipse.pde.launch=true"
+            ],
+            "env": {
+                "CLIENT_HOST": "127.0.0.1",
+                "CLIENT_PORT": "3333"
+            }
+        }
+    ]
+}
